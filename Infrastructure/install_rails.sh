@@ -44,16 +44,18 @@ sudo apt-get install -y postgresql-9.5 libpq-dev
 
 # install nginx
 sudo apt-get install -y nginx
-sudo nano /etc/nginx/sites-available/default
+# sudo nano /etc/nginx/sites-available/default
 ######
-sudo services nginx restart
+#sudo services nginx restart
 
+###############
+# Deploy is in the deploy_ralis.sh
 # clone project
-git clone https://github.com/mercadoni/payment_module.git
-cd payment_module
-bundle install
-rake assets:precompile RAILS_ENV=test
-puma -d
+#git clone https://github.com/mercadoni/payment_module.git
+#cd payment_module
+#bundle install
+#rake assets:precompile RAILS_ENV=test
+#puma -d
 
 #config puma
-mkdir -p shared/pids shared/sockets shared/log
+#mkdir -p shared/pids shared/sockets shared/log
